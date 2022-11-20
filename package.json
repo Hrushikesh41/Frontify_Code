@@ -1,5 +1,5 @@
 {
-  "name": "frontify",
+  "name": "@hrushikesh_cm/frontify",
   "version": "1.0.0",
   "description": "Frontify allows developer to create a bioler plate for react using just one click ",
   "main": "index.js",
