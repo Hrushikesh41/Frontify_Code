@@ -1,0 +1,14 @@
+{
+  "name": "frontify",
+  "version": "1.0.0",
+  "description": "Frontify allows developer to create a bioler plate for react using just one click ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hrushikesh Kokardekar",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
