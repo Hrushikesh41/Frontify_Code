@@ -8,3 +8,5 @@ This turns out to be a headache at one point of time .
 
 So frontify provides the developer with a solution to get rid this of this problem.
 By writing just one command, you can get your job done. Frontify deletes these unwanted files from your projects and adds some required folders in your project.
+
+Frontify offers you to develop application with various templates. 
