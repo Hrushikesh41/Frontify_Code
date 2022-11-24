@@ -3,7 +3,7 @@
 Frontify is an utility that makes a job of frontend developer much easier and reduces efforts .
 
 # How does Frontify help you ??
-Lot of times whike making a recat application , developer needs to delete some unwanted file as well as add some folders to his projects . 
+Lot of times whike making a react application , developer needs to delete some unwanted file as well as add some folders to his projects . 
 This turns out to be a headache at one point of time . 
 
 So frontify provides the developer with a solution to get rid this of this problem.
