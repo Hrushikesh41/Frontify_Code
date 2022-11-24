@@ -12,6 +12,7 @@
     "frontify": "bin.js"
   },
   "dependencies": {
+    "@hrushikesh_cm/frontify": "^1.0.5",
     "cli-color": "^2.0.3",
     "inquirer": "^8.2.4",
     "nodemon": "^2.0.20",

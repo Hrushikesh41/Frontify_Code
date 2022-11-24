@@ -41,14 +41,20 @@ inquirer.prompt([
             )
           );
     }else if(result.choice == "vite"){
-        child.execSync(`npm create vite@latest`, { stdio: [] });
+        const name = prompt(`Whats your Application Name ?`);
+        const template = prompt(`Which Template You Would Like to Use ?`)
+        console.log(`Creating ${name}....`);
 
-        fs.unlinkSync(`${process.cwd()}/src/reportWebVitals.js`);
-        fs.unlinkSync(`${process.cwd()}/src/setupTests.js`);
-        fs.unlinkSync(`${process.cwd()}/src/App.test.js`);
-        fs.mkdirSync(`${process.cwd()}/src/components`);
-        fs.mkdirSync(`${process.cwd()}/src/assets`);
-        fs.mkdirSync(`${process.cwd()}/src/pages`);
+        child.execSync(`npm create vite@latest ${name} -- --template ${template}`, { stdio: [] });
+
+        fs.mkdirSync(`${process.cwd()}/${name}/src/components`);
+        fs.mkdirSync(`${process.cwd()}/${name}/src/pages`);
+
+        console.log(
+            cli_color.greenBright(
+              "Folders are created... \n Happy Coding ✨"
+            )
+          );
     }
 }).catch((err) => {
     console.log(err);
