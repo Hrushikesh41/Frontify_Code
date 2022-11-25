@@ -10,3 +10,7 @@ So frontify provides the developer with a solution to get rid this of this probl
 By writing just one command, you can get your job done. Frontify deletes these unwanted files from your projects and adds some required folders in your project.
 
 Frontify offers you to develop application with various templates. 
+
+# How to use Frontify ?
+
+It's simple . Just run this command <code>npx "@hrushikesh_cm/frontify"</code> in your teminal and let frontify help you .

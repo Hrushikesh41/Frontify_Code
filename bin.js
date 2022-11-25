@@ -41,12 +41,11 @@ inquirer.prompt([
             )
           );
     }else if(result.choice == "vite"){
-        const name = prompt(`Whats your Application Name ?`);
-        const template = prompt(`Which Template You Would Like to Use ?`)
+        const name = prompt(`Whats your Application Name ? `);
+        const template = prompt(`Which Template You Would Like to Use ? `)
         console.log(`Creating ${name}....`);
 
         child.execSync(`npm create vite@latest ${name} -- --template ${template}`, { stdio: [] });
-
         fs.mkdirSync(`${process.cwd()}/${name}/src/components`);
         fs.mkdirSync(`${process.cwd()}/${name}/src/pages`);
 
