@@ -53,7 +53,6 @@ inquirer.prompt([
             }
         ]).then((data)=>{
             var template = data.choice.toLowerCase();
-            console.log(`Creating ${template}....`);
             console.log(`Creating ${name}....`);
 
             child.execSync(`npm create vite@latest ${name} -- --template ${template}`, { stdio: [] });
