@@ -45,17 +45,30 @@ inquirer.prompt([
           );
     }else if(result.choice == "vite"){
         const name = prompt(`Whats your Application Name ? `);
-        console.log(`Creating ${name}....`);
+        inquirer.prompt([
+            {
+                type: "list",
+                name: 'choice',
+                choices: ["Vanilla", "Vue", "React", "Preact", "Lit", "Svelte", "Solid", "Qwick"]
+            }
+        ]).then((data)=>{
+            var template = data.choice.toLowerCase();
+            console.log(`Creating ${template}....`);
+            console.log(`Creating ${name}....`);
 
-        child.execSync(`npm create vite@latest ${name}`, { stdio: [] });
-        fs.mkdirSync(`${process.cwd()}/${name}/src/components`);
-        fs.mkdirSync(`${process.cwd()}/${name}/src/pages`);
+            child.execSync(`npm create vite@latest ${name} -- --template ${template}`, { stdio: [] });
+            fs.mkdirSync(`${process.cwd()}/${name}/src/components`);
+            fs.mkdirSync(`${process.cwd()}/${name}/src/pages`);
 
-        console.log(
-            cli_color.greenBright(
-              "Folders are created... \n Happy Coding ✨"
-            )
-          );
+            console.log(
+                cli_color.greenBright(
+                "Folders are created... \n Happy Coding ✨"
+                )   
+            );
+        }).catch((err) => {
+            console.log(err);
+        });
+        
     }
 }).catch((err) => {
     console.log(err);
